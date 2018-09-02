@@ -28,3 +28,12 @@
     color: rgba(90,105,220,1);
     /* font-weight: 700; */
 }
+
+@media (max-width: 640px){
+    .Header {
+        padding: 15px 0;
+    }
+    .HeaderGroup {
+        grid-template-columns: repeat(4, auto);
+    }
+}
