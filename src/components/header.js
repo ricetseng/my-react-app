@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+
+//reuse component such as header
+
 const Header = ({ siteTitle }) => (
   <div
     style={{
