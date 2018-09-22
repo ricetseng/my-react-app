@@ -1,0 +1,20 @@
+{
+    "cells":[
+        {
+            "title": "Prototyping",
+            "image": "https://cl.ly/6d40477cff4c/prototype_ic.png"
+        },
+        {
+            "title": "Product design",
+            "image": "https://cl.ly/c446ea19cc24/layer_ic.png"
+        },
+        {
+            "title": "Visual design",
+            "image": "https://cl.ly/4924a56c4204/visual_ic.png"
+        },
+        {
+            "title": "Front-end coding",
+            "image": "https://cl.ly/d9a83f9320cf/code_ic.png"
+        }
+    ]
+}

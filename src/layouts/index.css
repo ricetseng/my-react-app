@@ -7,6 +7,7 @@ body {
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   line-height: 1.3;
+  background-color: rgba(241,240,240,1);
 }
 
 a {
@@ -17,9 +18,11 @@ a {
 
 .Hero {
   background: url('https://drh2acu5z204m.cloudfront.net/items/09450B1E1S3Y0n3O0o08/work_redesign.png?X-CloudApp-Visitor-Id=3139995');
+  /* background: url('images/work_redesign.png'); */
   height: 750px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -28,6 +31,8 @@ a {
   padding: 232px 50px;
   max-width: 450px; 
   /*if lower than 350px, it gonna take 100%*/
+  opacity: 0;
+  animation: HeroAnimation 0.7s 0.15s forwards cubic-bezier(0.2,0.8,0.2,1.0);
 }
 
 .Hero h1 {
@@ -36,6 +41,11 @@ a {
   font-size: 35px;
   font-weight: 500;
   line-height: 1.3;
+  /* opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2,0.8,0.2,1.0); */
 }
 
 .Hero p {
@@ -43,12 +53,15 @@ a {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
+  /* opacity: 0;
+  animation: HeroAnimation 0.7s 0.15s forwards cubic-bezier(0.2,0.8,0.2,1.0); */
 }
 
 .HeroButton {
   display: inline-block;
   margin-top: 20px;
-  transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  transition: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  /* animation: HeroAnimation 0.7s 0.3s forwards cubic-bezier(0.2,0.8,0.2,1.0); */
 }
 
 .HeroButton:hover{
@@ -73,6 +86,23 @@ a {
   box-shadow: 0px 15px 30px rgba(5, 10, 39, 0.1);
 }
 
+.Cards h2{
+  color: rgba(5, 10, 39, 1);
+  font-size: 35px;
+  font-weight: 700;
+  margin: 50px 20px;
+  text-align: center;
+}
+
+.CardGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  justify-items: center;
+  /* box-shadow: 0 20px 40px rgba(150,150,150,0.25); */
+}
+
 @media (max-width: 900px){
   .HeroGroup {
     padding: 240px 80px;
@@ -83,18 +113,28 @@ a {
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 1060px){
   .Hero {
     background: url('https://cl.ly/593ed6b5f7b4/work_redesign_s.png');
     background-size: cover;
     background-position: center;
   }
+  .CardGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media (max-width: 600px){
+  .CardGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 
 @keyframes HeroAnimation{
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
 
   100% {
@@ -102,3 +142,11 @@ a {
     transform: translateY(0px);
   }
 }
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
